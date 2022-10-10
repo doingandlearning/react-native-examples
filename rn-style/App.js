@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, false && styles.red]}>
       <View style={styles.cardContainer}>
         <View style={styles.cardImageContainer}>
           <Image style={styles.cardImage} source={require("./user.png")} />
@@ -31,6 +31,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  red: {
+    backgroundColor: "red",
   },
   cardContainer: {
     alignItems: "center",

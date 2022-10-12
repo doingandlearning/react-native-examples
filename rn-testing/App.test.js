@@ -1,6 +1,5 @@
 import React from "react";
 import renderer from "react-test-renderer";
-console.log(renderer);
 import App from "./App";
 
 describe("<App />", () => {

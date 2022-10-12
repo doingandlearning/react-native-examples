@@ -6,7 +6,6 @@ import { render, fireEvent } from "@testing-library/react-native";
 jest.mock("react-native/Libraries/Animated/NativeAnimatedHelper");
 
 test("form submits two answers", () => {
-  // Arrange
   const allQuestions = ["q1", "q2"];
   const mockFn = jest.fn();
 
@@ -16,12 +15,10 @@ test("form submits two answers", () => {
 
   const answerInputs = getAllByLabelText("answer input");
 
-  // Act
   fireEvent.changeText(answerInputs[0], "a1");
   fireEvent.changeText(answerInputs[1], "a2");
   fireEvent.press(getByText("Submit"));
 
-  // Assert
   expect(mockFn).toHaveBeenCalled();
   expect(mockFn).toHaveBeenCalledWith({
     1: { q: "q1", a: "a1" },

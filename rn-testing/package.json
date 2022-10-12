@@ -27,6 +27,7 @@
     "preset": "jest-expo",
     "testPathIgnorePatterns": [
       "solutions"
-    ]
+    ],
+    "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
   }
 }

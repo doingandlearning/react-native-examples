@@ -1,7 +1,6 @@
 import React from "react";
 import MessageForm from "./MessageForm";
 import { render, screen, fireEvent } from "@testing-library/react-native";
-import "@testing-library/jest-native/extend-expect";
 
 test("clicking send clears the input field", () => {
   // Arrange

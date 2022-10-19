@@ -19,9 +19,9 @@ export default function AsyncStorageApp({ navigation }) {
   async function handleStore() {
     try {
       await AsyncStorage.setItem("rn-password", password);
-      console.log("Password saved");
+      // console.log("Password saved");
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 

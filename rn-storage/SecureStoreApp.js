@@ -19,9 +19,9 @@ export default function SecureStoreApp({ navigation }) {
   async function handleStore() {
     try {
       await SecureStore.setItemAsync("rn-password", password);
-      console.log("Password saved");
+      // console.log("Password saved");
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 

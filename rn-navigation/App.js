@@ -1,5 +1,11 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  TouchableOpacity,
+  DevSettings,
+} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import {
   createDrawerNavigator,
@@ -14,6 +20,35 @@ function Feed({ navigation }) {
       <Text>Feed Screen</Text>
       <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
       <Button title="Toggle drawer" onPress={() => navigation.toggleDrawer()} />
+      <View>
+        <Text>Settings:</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Settings", { type: "Display" })}
+        >
+          <Text>Display</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Settings", { type: "Audio" })}
+        >
+          <Text>Audio</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Settings", { type: "Video" })}
+        >
+          <Text>Video</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+function SettingsScreen({ route: { params } }) {
+  return (
+    <View>
+      <Text>
+        {params?.type ? `Welcome to the ${params.type} settings` : "Settings"}
+      </Text>
     </View>
   );
 }
@@ -52,6 +87,7 @@ function MyDrawer() {
     >
       <Drawer.Screen name="Feed" component={Feed} />
       <Drawer.Screen name="Notifications" component={Notifications} />
+      <Drawer.Screen name="Settings" component={SettingsScreen} />
     </Drawer.Navigator>
   );
 }

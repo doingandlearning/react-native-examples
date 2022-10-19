@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rn-getting-started",
-    "slug": "rn-getting-started",
+    "name": "howdens",
+    "slug": "howdens",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,16 +24,10 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.dolearning.rngettingstarted"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "a1cba72c-de94-4c2b-a89b-02cd0161f977"
-      }
     }
   }
 }
